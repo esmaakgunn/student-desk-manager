@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Desk Manager</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <main class="container">
+        <header>
+            <span class="subtitle">ÖĞRENCİ ASİSTANI</span>
+            <h1>Student Desk Manager</h1>
+            <p>Görevlerini planla, zamanını verimli kullan.</p>
+        </header>
+
+        <section class="task-card">
+            <h2>Yeni Görev Ekle</h2>
+
+            <form id="taskForm">
+                <label for="taskInput">Görev adı</label>
+                <div class="input-group">
+                    <input
+                        type="text"
+                        id="taskInput"
+                        placeholder="Örn: Matematik ödevini yap"
+                        autocomplete="off"
+                        required
+                    >
+                    <button type="submit">Ekle</button>
+                </div>
+                <p id="message" role="status"></p>
+            </form>
+        </section>
+
+        <section class="task-card">
+            <h2>Görevlerim</h2>
+            <p id="emptyMessage">Henüz görev eklenmedi.</p>
+            <ul id="taskList"></ul>
+        </section>
+
+        <footer>
+            Güncel Yazılım Geliştirme Süreçleri ve DevOps
+            | Bireysel Proje
+        </footer>
+    </main>
+
+</body>
+</html>
