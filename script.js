@@ -16,8 +16,25 @@ taskForm.addEventListener("submit", function (event) {
     }
 
     const taskItem = document.createElement("li");
-    taskItem.textContent = taskName;
 
+    const taskLabel = document.createElement("label");
+    taskLabel.className = "task-label";
+
+    const checkbox = document.createElement("input");
+    checkbox.type = "checkbox";
+    checkbox.className = "task-checkbox";
+
+    const taskText = document.createElement("span");
+    taskText.textContent = taskName;
+
+    checkbox.addEventListener("change", function () {
+        taskItem.classList.toggle("completed", checkbox.checked);
+    });
+
+    taskLabel.appendChild(checkbox);
+    taskLabel.appendChild(taskText);
+
+    taskItem.appendChild(taskLabel);
     taskList.appendChild(taskItem);
 
     emptyMessage.hidden = true;
